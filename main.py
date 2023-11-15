@@ -29,7 +29,7 @@ def main(config):
     print("--- Preparing Data ---")
 
     ### YOUR CODE HERE
-    data_dir = "/gpfs/scratch/kgayadhankar/Resnet_v1/cifar-10-batches-py"
+    data_dir = "/gpfs/scratch/kgayadhankar/resnet_hyper_tune_v1/cifar-10-batches-py"
     ### YOUR CODE HERE
 
     x_train, y_train, x_test, y_test = load_data(data_dir)
