@@ -19,9 +19,9 @@ def configure():
                         help='save the checkpoint when epoch MOD save_interval == 0')
     parser.add_argument("--first_num_filters", type=int, default=16, help='number of classes')
     parser.add_argument("--weight_decay", type=float, default=2e-4, help='weight decay rate')
-    parser.add_argument("--modeldir", type=str, default='model_#3_hyp_ver1', help='model directory')
+    parser.add_argument("--modeldir", type=str, default='model_#3_hyp_ver1_no8', help='model directory')
     parser.add_argument("--learning_rate", type=float, default=0.1, help='learning rate')
-    parser.add_argument("--model_number", type=int, default=9, help='model number')
+    parser.add_argument("--model_number", type=int, default=8, help='model number')
     ### YOUR CODE HERE
     return parser.parse_args()
 
@@ -45,9 +45,9 @@ def main(config):
     #summary(model, (3, 32, 32))
 
     ### YOUR CODE HERE
-    batch_sizes = [512]
-    learning_rates = [0.1,0.01]
-    weight_decays = [0.002,0.0002]
+    batch_sizes = [128]
+    learning_rates = [0.01]
+    weight_decays = [0.0002]
     # First step: use the train_new set and the valid set to choose hyperparameters.
     for i in batch_sizes:
         for j in learning_rates:
